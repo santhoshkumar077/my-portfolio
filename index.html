@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>V. Santhosh Kumar — Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#101820; --bg-alt:#161f29; --panel:#182430;
+    --text:#EDEDE7; --muted:#9AA7B2; --accent:#E3B23C; --accent-2:#6FA787;
+    --border:#2A3742;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  html{scroll-padding-top:env(safe-area-inset-top,0px); scroll-behavior:smooth;}
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:'Inter',system-ui,sans-serif; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Space Grotesk',system-ui,sans-serif; margin:0; letter-spacing:-0.01em;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  a{color:var(--accent); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+  .wrap{max-width:920px; margin:0 auto; padding:0 24px;}
+
+  header.hero{
+    padding:88px 0 64px; border-bottom:1px solid var(--border);
+  }
+  .hero-grid{display:grid; grid-template-columns:1.3fr 1fr; gap:48px; align-items:start;}
+  @media (max-width:760px){ .hero-grid{grid-template-columns:1fr;} }
+  .kicker{font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--accent-2); margin-bottom:14px;}
+  h1{font-size:clamp(34px,5vw,52px); font-weight:700; max-width:14ch;}
+  .role{font-size:19px; color:var(--muted); margin-top:10px; max-width:44ch;}
+  .summary{margin-top:22px; max-width:52ch; color:#CBD2D8; font-size:15.5px;}
+  .contact-row{margin-top:26px; display:flex; gap:18px; flex-wrap:wrap; font-size:14px;}
+
+  .term{
+    background:var(--panel); border:1px solid var(--border); border-radius:6px;
+    padding:20px 22px; font-family:'IBM Plex Mono',monospace; font-size:13px;
+  }
+  .term .dots{display:flex; gap:6px; margin-bottom:16px;}
+  .dots span{width:9px; height:9px; border-radius:50%; background:var(--border); display:inline-block;}
+  .term .row{display:flex; gap:10px; padding:3px 0; color:#C3CBD1;}
+  .term .k{color:var(--accent-2); min-width:96px;}
+  .term .v{color:var(--text);}
+
+  section{padding:56px 0; border-bottom:1px solid var(--border);}
+  section:last-of-type{border-bottom:none;}
+  h2{font-size:22px; font-weight:600; margin-bottom:28px;}
+
+  .exp-item, .proj-item{display:grid; grid-template-columns:150px 1fr; gap:20px; padding:20px 0; border-top:1px solid var(--border);}
+  .exp-item:first-of-type, .proj-item:first-of-type{border-top:none;}
+  @media (max-width:600px){ .exp-item, .proj-item{grid-template-columns:1fr; gap:6px;} }
+  .date{font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--muted); padding-top:2px;}
+  .item-title{font-size:16.5px; font-weight:600; margin-bottom:4px;}
+  .item-org{color:var(--accent-2); font-size:14px; margin-bottom:10px;}
+  .item-org.status{color:var(--muted);}
+  ul.bullets{margin:0; padding-left:18px; color:#C3CBD1; font-size:14.5px;}
+  ul.bullets li{margin-bottom:6px;}
+  .tags{margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;}
+  .tag{font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--muted); border:1px solid var(--border); padding:3px 9px; border-radius:4px;}
+
+  .skill-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:28px;}
+  @media (max-width:600px){ .skill-grid{grid-template-columns:1fr;} }
+  .skill-cat{font-size:13px; color:var(--muted); margin-bottom:8px;}
+  .skill-list{font-size:15px; color:var(--text);}
+
+  .paper-box{background:var(--panel); border:1px solid var(--border); border-radius:6px; padding:22px 24px;}
+  .paper-title{font-weight:600; font-size:16px; margin-bottom:6px;}
+  .paper-meta{font-size:13.5px; color:var(--muted);}
+
+  footer{padding:48px 0 72px; color:var(--muted); font-size:14px;}
+  footer a{color:var(--text);}
+
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --bg:#FBFAF7; --bg-alt:#F2F0EA; --panel:#F2F0EA;
+      --text:#1B2430; --muted:#5C6773; --accent:#B4791F; --accent-2:#3E6E56; --border:#DEDAD0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="kicker">// developer.profile</div>
+        <h1>V. Santhosh Kumar</h1>
+        <p class="role">Java Developer — with backend (Flask/MySQL), front-end (HTML/CSS/JS), and applied cyber security experience.</p>
+        <p class="summary">Final-year B.E. Cyber Security student. Built and shipped a three-factor authentication system now under IEEE conference review, and two hands-on cyber security internships behind me. Comfortable moving between algorithmic problem-solving, backend APIs, and security-first design.</p>
+        <div class="contact-row">
+          <a href="mailto:vsksanthosh46@gmail.com">vsksanthosh46@gmail.com</a>
+          <a href="tel:+916381824242">+91 63818 24242</a>
+          <a href="https://github.com/santhoshkumar077" target="_blank" rel="noopener">github.com/santhoshkumar077</a>
+        </div>
+      </div>
+      <div class="term">
+        <div class="dots"><span></span><span></span><span></span></div>
+        <div class="row"><span class="k">education</span><span class="v">B.E. Cyber Security, 2027</span></div>
+        <div class="row"><span class="k">college</span><span class="v">Mahendra Engineering College</span></div>
+        <div class="row"><span class="k">cgpa</span><span class="v">8.06</span></div>
+        <div class="row"><span class="k">languages</span><span class="v">Java, Python, SQL</span></div>
+        <div class="row"><span class="k">status</span><span class="v">open to opportunities</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section id="experience">
+    <h2>Internship experience</h2>
+    <div class="exp-item">
+      <div class="date">Dec 2025 – Jan 2026</div>
+      <div>
+        <div class="item-title">Cyber Security Intern</div>
+        <div class="item-org">SLMV Sphere Technologies Pvt. Ltd</div>
+        <ul class="bullets">
+          <li>Worked with cloud fundamentals, Linux administration, and networking concepts in hands-on security training.</li>
+          <li>Strengthened practical skills in system security and Linux-based environments.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="date">Jun – Jul 2025</div>
+      <div>
+        <div class="item-title">Cyber Security Intern</div>
+        <div class="item-org">Puducherry Cyber Crime</div>
+        <ul class="bullets">
+          <li>Gained exposure to real-world cybercrime investigation processes under law enforcement guidance.</li>
+          <li>Assisted in analyzing security incidents and applying core cyber security principles.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="proj-item">
+      <div class="date">IEEE paper<br>submitted</div>
+      <div>
+        <div class="item-title">Image and Query-Based Multi-Factor Authentication System</div>
+        <div class="item-org status">Co-author</div>
+        <ul class="bullets">
+          <li>Co-designed a three-factor web authentication system: password verification, an ordered graphical image-sequence selection with randomized grid layout, and security-question verification.</li>
+          <li>Built and integrated the backend with Python/Flask and a MySQL database for secure session management.</li>
+        </ul>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">MySQL</span></div>
+      </div>
+    </div>
+    <div class="proj-item">
+      <div class="date">In progress</div>
+      <div>
+        <div class="item-title">PDF Question-Answering Bot (RAG)</div>
+        <div class="item-org status">Personal project</div>
+        <ul class="bullets">
+          <li>Document Q&A tool using a Retrieval-Augmented Generation pipeline to answer questions from uploaded PDFs.</li>
+          <li>LangChain for chunking, embedding, and retrieval; LangGraph to structure the multi-step workflow.</li>
+          <li>Applied prompt structuring and response grounding to reduce hallucinated answers.</li>
+        </ul>
+        <div class="tags"><span class="tag">Python</span><span class="tag">LangChain</span><span class="tag">LangGraph</span></div>
+      </div>
+    </div>
+    <div class="proj-item">
+      <div class="date">Ongoing</div>
+      <div>
+        <div class="item-title">Java Algorithmic Problem Solving</div>
+        <div class="item-org status">Online judge practice</div>
+        <ul class="bullets">
+          <li>Solved algorithmic problems including palindrome detection, Armstrong number verification, integer reversal, and vowel-consonant rearrangement.</li>
+          <li>Focused on robust edge-case handling to maximize hidden test case scores.</li>
+        </ul>
+        <div class="tags"><span class="tag">Java</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+    <div class="paper-box">
+      <div class="paper-title">Design and Implementation of an Image and Query-Based Multi-Factor Authentication System</div>
+      <div class="paper-meta">IEEE-format conference paper · Co-author · Submitted for review, Department of Cyber Security, Mahendra Engineering College</div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill-grid">
+      <div><div class="skill-cat mono">Languages</div><div class="skill-list">Java, Python, SQL</div></div>
+      <div><div class="skill-cat mono">Front-end</div><div class="skill-list">HTML, CSS, JavaScript</div></div>
+      <div><div class="skill-cat mono">Backend & web</div><div class="skill-list">Flask, MySQL, REST API design, Git/GitHub</div></div>
+      <div><div class="skill-cat mono">Systems & cloud</div><div class="skill-list">Linux, Networking fundamentals, Cyber security practices</div></div>
+    </div>
+  </section>
+
+  <footer>
+    Built from V. Santhosh Kumar's resume · Reach out at <a href="mailto:vsksanthosh46@gmail.com">vsksanthosh46@gmail.com</a>
+  </footer>
+</div>
+
+</body>
+</html>
